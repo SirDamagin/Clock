@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock Site</title>
+        <style>
+            p
+            {
+                font-family:cursive;
+                font-size:40px;
+                font-weight: bold;
+                align-self: center;
+            }
+            .clockBox
+            {
+                display:flex;
+                flex-direction: column;
+                width:500px;
+                padding: 20px 20px 20px 20px;
+                border-color: black;
+                border: 2px;
+                border-style: solid;
+            }
+            .buttonBox
+            {
+                display:flex;
+                justify-content: space-around;
+            }
+            button
+            {
+                padding: 20px 40px 20px 40px;
+            }
+            .block
+            {
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clockBox">
+            <p>00:00:00</p>
+            <input class="slider" type="range" min="10" max="1000" value="1000">
+            <div class="buttonBox">
+                <button onclick="startTimer();">Start</button>
+                <button onclick="stopTimer();">Stop</button>
+                <button onclick="resetTimer();">Reset</button>
+            </div>
+        </div>
+        
+        <p class="value"></p>
+        <script src="04-Clock.js"></script>
+    </body>
+</html>
